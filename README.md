@@ -7,10 +7,10 @@ Removed ssl cert from dockerfile, not needed for this application
 
 Chart running on local cluster:
 
-![alt text](images\apprunning.png)
+![](images/apprunning.png)
 
-![alt text](images\apphealthz.png)
+![](images/apphealthz.png)
 
-![alt text](images\pods.png)
+![](images/pods.png)
 
-![alt text](images\service.png)
+![](images/service.png)
