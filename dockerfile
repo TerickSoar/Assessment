@@ -2,7 +2,7 @@
 FROM golang:1.22-alpine AS builder
 
 # Install build dependencies
-RUN apk add --no-cache git
+RUN apk add --no-cache git=2.43.0-r0
 
 WORKDIR /build
 
@@ -19,10 +19,10 @@ COPY app/main.go ./
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o server main.go
 
 # Final stage
-FROM alpine:latest
+FROM alpine:3.19
 
 # Install ca-certificates for HTTPS
-RUN apk --no-cache add ca-certificates
+RUN apk --no-cache add ca-certificates=20240226-r0
 
 # Create non-root user
 RUN addgroup -g 1000 appgroup && \
