@@ -22,7 +22,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o server main.go
 FROM alpine:3.19
 
 # Install ca-certificates for HTTPS
-RUN apk --no-cache add ca-certificates=20240226-r0
+RUN apk --no-cache add ca-certificates
 
 # Create non-root user
 RUN addgroup -g 1000 appgroup && \
