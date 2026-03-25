@@ -2,7 +2,7 @@
 FROM golang:1.22-alpine AS builder
 
 # Install build dependencies
-RUN apk add --no-cache git=2.43.0-r0
+RUN apk add --no-cache git=2.47.3-r0
 
 WORKDIR /build
 
